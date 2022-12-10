@@ -20,7 +20,7 @@ def calculate_coordinate_ndim(time, pos_a, pos_b):
 
 
 # Todo: move this into test.py later
-if __name__ == "__main__":
+if __name__ == '__main__':
     print(calculate_coordinate(0.5, 0, 0, 0, 1))
     print(calculate_coordinate(0.3, 0, 0, 0, 1))
     print(calculate_coordinate(0.2, 1, 1, 2, 9))
