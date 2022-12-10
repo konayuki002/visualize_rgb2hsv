@@ -29,11 +29,9 @@ class Position_RGB:
         return self.__class__(self.x - other.x, self.y - other.y, self.z - other.z, \
                                 self.r - other.r, self.g - other.g, self.b - other.b)
 
-
     def __str__(self):
         return "[" + str(self.x) + ", " + str(self.y) + ", " + str(self.z) \
                     + ", " + str(self.r) + ", " + str(self.g) + ", " + str(self.b) + "]"
-
 
 
 # ([[x, y(, z), r, g, b] x 3], s, t) --> [R, G, B]
@@ -60,14 +58,15 @@ def calculate_color(list_of_position_rgb, s, t):
     return result
 
 
-
 if __name__ == '__main__':
+    # __sub__ の確認
     obj1 = Position_RGB(2, 1, 3, 0.2, 0.5, 0.7)
     obj2 = Position_RGB(2, 5, 0, 0, 0, 1)
     obj3 = obj2 - obj1
     print("obj3: ")
     print(obj3)
 
+    # 
     O = Position_RGB(0, 0, 0, 0, 0, 0)
     W = Position_RGB(0, 1, 0, 1, 1, 1)
     P = Position_RGB(2**0.5/3, 1/3, 0, 1, 0, 0)

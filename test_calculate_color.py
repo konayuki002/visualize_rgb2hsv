@@ -8,11 +8,11 @@ if __name__ == '__main__':
     R = Position_RGB(2**0.5/3, 1/3, 0, 1, 0, 0)
     C = Position_RGB(-2**0.5/3, 2/3, 0, 0, 1, 1)
 
-    color_list = [O, W, R]
+    color_list = []
     step = 0.1
     s = t = 0 
     cnt = 0
-    while s < 1:
+    while s <= 1:
         while s + t <= 1:
             color_list.append(calculate_color([O, W, R], s, t))
             color_list.append(calculate_color([O, W, C], s, t))
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     f, ax = plt.subplots(1, 1)
     ax.set_aspect('equal')
     for obj in color_list:
-        col = (obj.r, obj.b, obj.b)
+        col = (obj.r, obj.g, obj.b)
         ax.scatter(obj.x, obj.y, color = col)
     
 
